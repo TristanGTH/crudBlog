@@ -1,0 +1,23 @@
+{
+    "name": "tristan/blog-composer",
+    "scripts": {
+        "server": "php -S 127.0.0.1:4000/articles -t public/"
+    },
+    "autoload": {
+        "files": [
+            "app/models/model.php",
+            "app/models/post.php",
+            "app/helpers/view.php",
+            "app/controllers/post.php"
+        ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.2",
+        "nesbot/carbon": "^2.41",
+        "filp/whoops": "^2.9",
+        "guzzlehttp/guzzle": "7.0"
+    },
+    "config": {
+        "process-timeout" : 0
+    }
+}
