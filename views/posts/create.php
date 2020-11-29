@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+<?php $this->layout('layouts/default',['title' => 'My blog']) ?>
 
 
 <section class="col-12">
@@ -38,8 +38,6 @@
 
 
 
-<?php $content = ob_get_clean(); ?>
 
-<?php require __DIR__ . "/../layouts/default.php"; ?>
 
 

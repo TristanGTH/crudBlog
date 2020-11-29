@@ -14,7 +14,9 @@ function getPostById($id)
     $statement = $db->prepare('SELECT * FROM posts WHERE id = :id');
     $statement->execute(['id' => $id]);
     $post = $statement->fetchObject();
-    $post->created_at = ucfirst(Carbon::parse($post->created_at, 'Europe/Paris')->locale('fr_FR')->diffForHumans());
+    if ($post){
+        $post->created_at = ucfirst(Carbon::parse($post->created_at, 'Europe/Paris')->locale('fr_FR')->diffForHumans());
+    }
     return $post;
 }
 
